@@ -42,7 +42,7 @@ $aPacientes[] = array(
 <body>
     <main class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center py-5">
                 <h1>Listado de pacientes</h1>
             </div>
         </div>
@@ -58,12 +58,12 @@ $aPacientes[] = array(
                         </tr>
                     </thead>
                     <tbody>
-                        <?php for($i=0; $i < count($aPacientes); $i++){ ?>
+                        <?php foreach($aPacientes as $paciente){ ?>
                             <tr>
-                                <td><?php echo $aPacientes[$i]["dni"]; ?></td>
-                                <td><?php echo $aPacientes[$i]["nombre"]; ?></td>
-                                <td><?php echo $aPacientes[$i]["edad"]; ?></td>
-                                <td><?php echo $aPacientes[$i]["peso"]; ?></td>
+                                <td><?php echo $paciente["dni"]; ?></td>
+                                <td><?php echo $paciente["nombre"]; ?></td>
+                                <td><?php echo $paciente["edad"]; ?></td>
+                                <td><?php echo $paciente["peso"]; ?></td>
                             </tr>
                             <?php } ?>
                     </tbody>
